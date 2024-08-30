@@ -4,7 +4,7 @@
     <div class="row py-3 align-items-center">
         <div class="col-md-3 col-sm-12 col-4">
             <div id="mobile" class="row">
-                <div id="menu" class="d-flex align-items-center justify-content-start gap-2 ps-5">
+                <div class="d-flex align-items-center justify-content-start gap-2 ps-5">
                     <i class="fas fa-bars fs-4 text-white"></i>
                     <img src="{{asset('images/logo.png')}}" alt="" srcset="" height="85%">
                 </div>
@@ -13,8 +13,8 @@
         <div class="col-md-6 col-sm-12 col-8">
             <div class="row">
                 <div class="d-flex align-items-center justify-content-center gap-2 position-relative">
-                    <input id="input" class="form-control bg-transparent w-75" style="border-radius: 9999px; border: 1px solid #676767;" type="text" placeholder="Buscar">
-                    <button id="lupa" class="btn"> <i class="fas fa-search fs-5 px-4 py-2" style="color: #fff; position: absolute; right: 145px;"></i></button>
+                    <input id="input" class="form-control bg-transparent w-75 text-white" style="border-radius: 9999px; border: 1px solid #676767;" type="text" placeholder="Buscar">
+                    <button class="btn"> <i class="fas fa-search fs-5 px-4 py-2" style="color: #fff; position: absolute; right: 145px;"></i></button>
                     <i class="fas fa-microphone text-white fs-4 px-2 py-1 rounded-circle" style="background-color: #3d3d3d; cursor:pointer"></i>
                 </div>
             </div>
@@ -32,7 +32,7 @@
 </div>
 <div class="container-fluid" style="background-color: #0f0f0f; height:100dvh; widht:95%">
     <div id="video-container" class="container-md d-flex align-items-center justify-content-center py-2">
-        <!-- Aquí se mostrarán los videos -->
+    {{-- aqui el video --}}
     </div>
 </div>
 <div class="container-fluid py-3 ps-5" style="background-color: #0f0f0f;">
@@ -84,15 +84,6 @@
 <style>
     #input::placeholder {
         color: #676767;
-        text-decoration-color:white;
-    }
-    @media(max-width:992px){
-        #menu{
-            padding-left: 15px !important;
-        }
-        #lupa{
-            display: none
-        }
     }
     #video-container {
         width: 100dvh;
@@ -100,14 +91,14 @@
     }
     
     #video-container iframe {
-        width: 150dvh;
+        width: 185dvh;
         height: 100%;
         border: none; 
     }
 </style>
 <script>
     document.addEventListener("DOMContentLoaded", function(){
-        document.getElementById('lupa').addEventListener('click', function() {
+        document.getElementById('input').addEventListener('keypress', function() {
             const query = document.getElementById('input').value;
             
             fetch(`/search-videos?query=${query}`)
@@ -128,6 +119,7 @@
                 `;
                     videoContainer.appendChild(videoElement);
                 });
+                document.getElementById('input').value = '';
             })
             .catch(error => {
                 console.error('Error al buscar videos:', error);
