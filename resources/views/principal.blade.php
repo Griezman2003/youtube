@@ -12,9 +12,9 @@
         </div>
         <div class="col-md-6 col-sm-12 col-8">
             <div class="row">
-                <div class="d-flex align-items-center justify-content-center gap-2 position-relative">
-                    <input id="input" class="form-control bg-transparent w-75 text-white" style="border-radius: 9999px; border: 1px solid #676767;" type="text" placeholder="Buscar">
-                    <button class="btn"> <i class="fas fa-search fs-5 px-4 py-2" style="color: #fff; position: absolute; right: 145px;"></i></button>
+                <div class="d-flex align-items-center justify-content-center">
+                    <input id="input" class="form-control bg-transparent w-75 text-white" style="border-bottom-left-radius: 100px; border-top-left-radius: 100px; border: 1px solid #676767;" type="text" placeholder="Buscar">
+                    <button class="btn ps-0"><i class="fas fa-search fs-5 text-white py-2 px-3 " style="border-bottom-right-radius: 100px; border-top-right-radius: 100px;  border: 1px solid #676767;"></i></button>
                     <i class="fas fa-microphone text-white fs-4 px-2 py-1 rounded-circle" style="background-color: #3d3d3d; cursor:pointer"></i>
                 </div>
             </div>
@@ -30,9 +30,9 @@
         </div>
     </div>
 </div>
-<div class="container-fluid" style="background-color: #0f0f0f; height:100dvh; widht:95%">
-    <div id="video-container" class="container-md d-flex align-items-center justify-content-center py-2">
-    {{-- aqui el video --}}
+<div class="container-fluid m-0" style="background-color: #0f0f0f; height:100dvh;">
+    <div id="video-container"class="container-fluid d-flex align-items-center justify-content-center py-2">
+        {{-- aqui el video --}}
     </div>
 </div>
 <div class="container-fluid py-3 ps-5" style="background-color: #0f0f0f;">
@@ -53,7 +53,7 @@
                 </div>
                 <div class="col-md-7 col-sm-12 col-12">
                     <div class=" iconos d-flex align-items-center justify-content-start">
-                        <button class="text-white py-2  px-4 btn " style=" border-top-left-radius: 100px;  border-bottom-left-radius: 100px; background-color: #3f3f3f;"><i class="fas fa-thumbs-up text-white pe-2"></i>419k
+                        <button class="text-white py-2 px-4 btn " style=" border-top-left-radius: 100px;  border-bottom-left-radius: 100px; background-color: #3f3f3f;"><i class="fas fa-thumbs-up text-white pe-2"></i>419k
                             <button class="btn px-4 text-white py-2 border-start" style="background-color: #3f3f3f; border-top-right-radius: 100px;  border-bottom-right-radius: 100px;"><i class="fas fa-thumbs-down text-white me-1"></i>130k</button>
                         </button>
                         <button class="btn text-white py-2 px-3 ms-2" style="background-color: #3f3f3f; border-radius:100px"><i class="fas fa-share text-white me-2"></i>Compartir</button>
@@ -85,31 +85,27 @@
     #input::placeholder {
         color: #676767;
     }
-    #video-container {
-        width: 100dvh;
-        height: 100%;
-    }
-    
     #video-container iframe {
-        width: 185dvh;
-        height: 100%;
+        width: 91vw;
+        height: 100vh;
         border: none; 
     }
 </style>
 <script>
-    document.addEventListener("DOMContentLoaded", function(){
-        document.getElementById('input').addEventListener('keypress', function() {
-            const query = document.getElementById('input').value;
-            
-            fetch(`/search-videos?query=${query}`)
-            .then(response => response.json())
-            .then(videos => {
-                const videoContainer = document.getElementById('video-container');
-                videoContainer.innerHTML = ''; 
+    document.addEventListener("DOMContentLoaded", function() {
+        document.getElementById('input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const query = document.getElementById('input').value;
                 
-                videos.forEach(video => {
-                    const videoElement = document.createElement('div');
-                    videoElement.innerHTML = `
+                fetch(`/search-videos?query=${query}`)
+                .then(response => response.json())
+                .then(videos => {
+                    const videoContainer = document.getElementById('video-container');
+                    videoContainer.innerHTML = ''; 
+                    
+                    videos.forEach(video => {
+                        const videoElement = document.createElement('div');
+                        videoElement.innerHTML = `
                     <iframe 
                         src="https://www.youtube.com/embed/${video.id.videoId}" 
                         frameborder="0" 
@@ -117,13 +113,15 @@
                         allowfullscreen>
                     </iframe>
                 `;
-                    videoContainer.appendChild(videoElement);
+                        videoContainer.appendChild(videoElement);
+                    });
+                    document.getElementById('input').value = '';
+                })
+                .catch(error => {
+                    console.error('Error al buscar videos:', error);
                 });
-                document.getElementById('input').value = '';
-            })
-            .catch(error => {
-                console.error('Error al buscar videos:', error);
-            });
+            }
         });
     });
+    
 </script>
