@@ -95,12 +95,12 @@
         }
     }
     #video-container {
-        width: 100%;
+        width: 100dvh;
         height: 100%;
     }
     
     #video-container iframe {
-        width: 100%;
+        width: 150dvh;
         height: 100%;
         border: none; 
     }
@@ -114,7 +114,7 @@
             .then(response => response.json())
             .then(videos => {
                 const videoContainer = document.getElementById('video-container');
-                videoContainer.innerHTML = ''; /
+                videoContainer.innerHTML = ''; 
                 
                 videos.forEach(video => {
                     const videoElement = document.createElement('div');
