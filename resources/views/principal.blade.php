@@ -83,10 +83,12 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-md-8 p-0">
-                    <div class="d-flex align-items-center justify-content-start text-white">
+                <div class="col-md-12 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
-                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                        <h6 class="m-0">@BlurryFace hace 2 años 
+                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                        </h6>
                     </div>
                     <div class="row text-white ps-5">
                         <p>"This is a sample text; please feel free to modify it."</p>
@@ -94,10 +96,12 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-md-8 p-0">
-                    <div class="d-flex align-items-center justify-content-start text-white">
+                <div class="col-md-12 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
-                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                        <h6 class="m-0">@BlurryFace hace 2 años 
+                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                        </h6>
                     </div>
                     <div class="row text-white ps-5">
                         <p>"This is a sample text; please feel free to modify it."</p>
@@ -105,10 +109,12 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-md-8 p-0">
-                    <div class="d-flex align-items-center justify-content-start text-white">
+                <div class="col-md-12 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
-                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                        <h6 class="m-0">@BlurryFace hace 2 años 
+                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                        </h6>
                     </div>
                     <div class="row text-white ps-5">
                         <p>"This is a sample text; please feel free to modify it."</p>
@@ -116,10 +122,12 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-md-8 p-0">
-                    <div class="d-flex align-items-center justify-content-start text-white">
+                <div class="col-md-12 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
-                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                        <h6 class="m-0">@BlurryFace hace 2 años 
+                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                        </h6>
                     </div>
                     <div class="row text-white ps-5">
                         <p>"This is a sample text; please feel free to modify it."</p>
@@ -127,10 +135,12 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-md-8 p-0">
-                    <div class="d-flex align-items-center justify-content-start text-white">
+                <div class="col-md-12 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
-                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                        <h6 class="m-0">@BlurryFace hace 2 años 
+                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                        </h6>
                     </div>
                     <div class="row text-white ps-5">
                         <p>"This is a sample text; please feel free to modify it."</p>
@@ -138,10 +148,12 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-md-8 p-0">
-                    <div class="d-flex align-items-center justify-content-start text-white">
+                <div class="col-md-12 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
-                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                        <h6 class="m-0">@BlurryFace hace 2 años 
+                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                        </h6>
                     </div>
                     <div class="row text-white ps-5">
                         <p>"This is a sample text; please feel free to modify it."</p>
@@ -149,10 +161,25 @@
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-md-8 p-0">
-                    <div class="d-flex align-items-center justify-content-start text-white">
+                <div class="col-md-12 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
-                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                        <h6 class="m-0">@BlurryFace hace 2 años 
+                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                        </h6>
+                    </div>
+                    <div class="row text-white ps-5">
+                        <p>"This is a sample text; please feel free to modify it."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-12 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white position-relative">
+                        <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
+                        <h6 class="m-0">@BlurryFace hace 2 años 
+                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                        </h6>
                     </div>
                     <div class="row text-white ps-5">
                         <p>"This is a sample text; please feel free to modify it."</p>
@@ -160,8 +187,18 @@
                 </div>
             </div>
         </div>
-        <div id="videosR" class="col-md-4">
-            {{-- aqui van los videos por defaul --}}
+        <div class="col-md-4">
+            <div class="row mt-4 ps-3 gap-3">
+                <button class="btn bg-white py-auto" style="border-radius:100px; width:80px"><h6 class="text-black">Todos</h6></button>
+                <button class="btn py-auto" style="border-radius:100px; width:115px; background-color: #3f3f3f;"><h6 class="text-white">RycKMenstn</h6></button>
+                <button class="btn  py-auto" style="border-radius:100px; width:130px; background-color: #3f3f3f;"><h6 class="text-white">Electronica</h6></button>
+                <button class="btn  py-auto" style="border-radius:100px; width:130px; background-color: #3f3f3f;"><h6 class="text-white">Skrillex</h6></button>
+            </div>
+            <div class="row mt-3">
+                <div id="video-list">
+                    {{-- Aquí se generarán dinámicamente los videos con sus títulos  --}}
+                </div>
+            </div>
         </div>
     </div>
 </div>

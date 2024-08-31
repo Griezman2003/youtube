@@ -48,25 +48,39 @@
         });
         
         // otra seccion de codigo
-        fetch(`index`)
-        .then(response => response.json())
-        .then(videos=>{
-            const videoContainer = document.getElementById('videosR');
-            videoContainer.innerHTML = ''; 
-            videos.forEach(video => {
-                const videoElement = document.createElement('div');
-                videoElement.style.marginTop = '20px';
-                videoElement.innerHTML = `
-                        <iframe
-                            src="https://www.youtube.com/embed/${video.id}" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    `;
-                videoContainer.appendChild(videoElement);
-            });
+    fetch(`index`)
+    .then(response => response.json())
+    .then(videos => {
+        const videoList = document.getElementById('video-list');
+        videoList.innerHTML = ''; 
+
+        videos.forEach(video => {
+            const videoItem = document.createElement('div');
+            videoItem.classList.add('row', 'mb-4');
+
+            videoItem.innerHTML = `
+                <div class="col-md-7">
+                    <iframe
+                        src="https://www.youtube.com/embed/${video.id}"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen
+                        style="width: 100%; height: auto;">
+                    </iframe>
+                </div>
+                <div class="col-md-4">
+                    <h6 class="text-white">${video.snippet.title}</h6>
+                </div>
+            `;
+            videoList.appendChild(videoItem);
         });
+    })
+    .catch(error => {
+        console.error('Error al cargar videos:', error);
     });
+
+
+
+});
     
 </script>
