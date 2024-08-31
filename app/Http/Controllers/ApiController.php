@@ -17,7 +17,7 @@ class ApiController extends Controller
     */
     public function searchVideos(Request $request)
     {
-        $apiKey = ('AIzaSyBFAeN-1s7AVVPaPPL8VFiJoFBHX_Rych8');
+        $apiKey = ('Your Api');
         $query = $request->input('query');
         $maxResults = 1;
         
@@ -44,7 +44,7 @@ class ApiController extends Controller
      */
     public function index()
     {
-        $apiKey = 'AIzaSyBFAeN-1s7AVVPaPPL8VFiJoFBHX_Rych8'; 
+        $apiKey = 'Your Api'; 
         $maxResults = 5; 
         
         $response = Http::get('https://www.googleapis.com/youtube/v3/videos', [
