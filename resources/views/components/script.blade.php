@@ -6,7 +6,7 @@
             if (event.key === 'Enter') {
                 const query = document.getElementById('input').value;
                 
-                fetch(`/search-videos?query=${query}`)
+                fetch(`search-videos?query=${query}`)
                 .then(response => response.json())
                 .then(videos => {
                     const videoContainer = document.getElementById('video-container');

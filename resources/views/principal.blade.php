@@ -48,7 +48,7 @@
                     <div class="d-flex align-items-center justify-content-start gap-4">
                         <button class="btn bg-transparent"><i class="fas fa-user text-white fs-4"></i></button>
                         <h6 class="text-white">XBlurryFaceX | by Bootstrap <br>
-                            <span class="text-white">20M k suscriptores</span>
+                            <span class="text-white">20M suscriptores</span>
                         </h6>
                         <button class="btn bg-white text-black fw-medium" style="border-radius:100px">Suscribirse</button>
                     </div>
