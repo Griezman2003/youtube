@@ -17,22 +17,38 @@ class ApiController extends Controller
     */
     public function searchVideos(Request $request)
     {
-        $apiKey = ('Your Api');
+        $apiKey = ('');
         $query = $request->input('query');
         $maxResults = 1;
-        
         $response = Http::get('https://www.googleapis.com/youtube/v3/search', [
             'key' => $apiKey,
             'q' => $query,
-            'part' => 'snippet',
+            'part' => 'id,snippet',
             'order' => 'relevance',
             'maxResults' => $maxResults
         ]);
-        
+    
         if ($response->successful()) {
-            return response()->json($response->json()['items']);
+            $items = $response->json()['items'];
+    
+            if (empty($items)) {
+                return response()->json(['error' => 'No videos found'], 404);
+            }
+            $videoIds = array_map(function ($item) {
+                return $item['id']['videoId'];
+            }, $items);
+            $detailsResponse = Http::get('https://www.googleapis.com/youtube/v3/videos', [
+                'key' => $apiKey,
+                'id' => implode(',', $videoIds),
+                'part' => 'snippet,statistics'
+            ]);
+            if ($detailsResponse->successful()) {
+                return response()->json($detailsResponse->json()['items']);
+            } else {
+                return response()->json(['error' => 'Error al obtener detalles del video'], $detailsResponse->status());
+            }
         } else {
-            return response()->json(['error' => 'Error al obtener videos'], $response->status());
+            return response()->json(['error' => 'Error al buscar videos'], $response->status());
         }
     }
     
@@ -44,13 +60,13 @@ class ApiController extends Controller
      */
     public function index()
     {
-        $apiKey = 'Your Api'; 
+        $apiKey = ''; 
         $maxResults = 5; 
         
         $response = Http::get('https://www.googleapis.com/youtube/v3/videos', [
             'key' => $apiKey,
             'chart' => 'mostPopular', 
-            'part' => 'snippet',
+            'part' => 'snippet,statistics',
             'maxResults' => $maxResults,
             'regionCode' => 'MX'
         ]);

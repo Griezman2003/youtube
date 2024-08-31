@@ -43,6 +43,9 @@
     </div>
     <div class="row ps-5 mt-2">
         <div class="col-md-12 col-sm-12 col-12">
+            <div id="titulo">
+                {{-- aqui se genera el titulo dinamico --}}
+            </div>
             <div class="row">
                 <div class="col-md-5 col-sm-12 col-5">
                     <div class="d-flex align-items-center justify-content-start gap-4">
@@ -72,11 +75,22 @@
     <div class="row ps-5">
         <div class="col-md-8 py-4 rounded">
             <div class="row py-3 rounded" style="background-color: #3f3f3f;">
-                <div>
-                    <h6 class="text-white">22 M de vistas  hace 4 años  <span style="color: #3d9ef1; cursor:pointer;">#Mashup #8230 #HyperMashup</span></h6>
-                    <h6 class="text-white">"This is a template that consumes the YouTube API service. Enjoy it!", BlurryFace.</h6>
+                <div class="col-md-12">
+                    <div class="text-white d-flex mb-1">
+                        <div id="vista">
+                            22 M de vistas hace 4 años
+                        </div>
+                        <span class="ms-2" style="color: #3d9ef1; cursor:pointer;">#Mashup #8230 #HyperMashup</span>
+                    </div>
+                    <div id="descripcion-container">
+                        <h6 id="descripcion" class="text-white">
+                            This is a template that consumes the YouTube API service. Enjoy it!", BlurryFace.
+                        </h6>
+                        <button class="btn bg-transparent text-white p-0">Ver más</button>
+                    </div>
                 </div>
             </div>
+            
             <div class="row mt-3">
                 <div class="col-md-8">
                     <h5 class="text-white">11,182 comentarios</h5>
@@ -87,7 +101,7 @@
                     <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
                         <h6 class="m-0">@BlurryFace hace 2 años 
-                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                            <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
                         </h6>
                     </div>
                     <div class="row text-white ps-5">
@@ -100,7 +114,7 @@
                     <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
                         <h6 class="m-0">@BlurryFace hace 2 años 
-                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                            <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
                         </h6>
                     </div>
                     <div class="row text-white ps-5">
@@ -113,7 +127,7 @@
                     <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
                         <h6 class="m-0">@BlurryFace hace 2 años 
-                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                            <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
                         </h6>
                     </div>
                     <div class="row text-white ps-5">
@@ -126,7 +140,7 @@
                     <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
                         <h6 class="m-0">@BlurryFace hace 2 años 
-                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                            <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
                         </h6>
                     </div>
                     <div class="row text-white ps-5">
@@ -139,7 +153,7 @@
                     <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
                         <h6 class="m-0">@BlurryFace hace 2 años 
-                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                            <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
                         </h6>
                     </div>
                     <div class="row text-white ps-5">
@@ -152,7 +166,7 @@
                     <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
                         <h6 class="m-0">@BlurryFace hace 2 años 
-                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                            <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
                         </h6>
                     </div>
                     <div class="row text-white ps-5">
@@ -165,7 +179,7 @@
                     <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
                         <h6 class="m-0">@BlurryFace hace 2 años 
-                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                            <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
                         </h6>
                     </div>
                     <div class="row text-white ps-5">
@@ -178,7 +192,7 @@
                     <div class="d-flex align-items-center justify-content-start text-white position-relative">
                         <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
                         <h6 class="m-0">@BlurryFace hace 2 años 
-                        <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
+                            <i class="fas fa-ellipsis-v text-white position-absolute" style="left: 98%; top:45%"></i>
                         </h6>
                     </div>
                     <div class="row text-white ps-5">
