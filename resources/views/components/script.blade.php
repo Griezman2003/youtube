@@ -46,6 +46,27 @@
                 });
             }
         });
+        
+        // otra seccion de codigo
+        fetch(`index`)
+        .then(response => response.json())
+        .then(videos=>{
+            const videoContainer = document.getElementById('videosR');
+            videoContainer.innerHTML = ''; 
+            videos.forEach(video => {
+                const videoElement = document.createElement('div');
+                videoElement.style.marginTop = '20px';
+                videoElement.innerHTML = `
+                        <iframe
+                            src="https://www.youtube.com/embed/${video.id}" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    `;
+                videoContainer.appendChild(videoElement);
+            });
+        });
     });
     
 </script>

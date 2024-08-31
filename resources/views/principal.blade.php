@@ -13,7 +13,7 @@
         <div class="col-md-6 col-sm-12 col-8">
             <div class="row">
                 <div class="d-flex align-items-center justify-content-center">
-                    <input id="input" class="form-control bg-transparent w-75 text-white" style="border-bottom-left-radius: 100px; border-top-left-radius: 100px; border: 1px solid #676767;" type="text" placeholder="Buscar">
+                    <input id="input" class="form-control bg-transparent w-75 text-white" style="border-bottom-left-radius: 100px; border-top-left-radius: 100px; border: 1px solid #676767;" type="text" placeholder="Buscar"  name="query">
                     <button class="btn ps-0"><i class="fas fa-search fs-5 text-white py-2 px-3 " style="border-bottom-right-radius: 100px; border-top-right-radius: 100px;  border: 1px solid #676767;"></i></button>
                     <i class="fas fa-microphone text-white fs-4 px-2 py-1 rounded-circle" style="background-color: #3d3d3d; cursor:pointer"></i>
                 </div>
@@ -68,16 +68,100 @@
         </div>
     </div>
 </div> 
-
 <div class="container-fluid ps-5" style="background-color: #0f0f0f;">
-    <div class="row py-2">
-        <div class="col-md-9 py-4 ms-5 rounded" style="background-color: #3f3f3f;">
-            <h6 class="text-white">22 M de vistas  hace 4 años  <span style="color: #3d9ef1; cursor:pointer;">#Mashup #8230 #HyperMashup</span></h6>
-            <div class="row">
+    <div class="row ps-5">
+        <div class="col-md-8 py-4 rounded">
+            <div class="row py-3 rounded" style="background-color: #3f3f3f;">
                 <div>
-                    <h6 class="text-white">A longer version of this mashup using May's original and the other version of NEON KID.</h6>
+                    <h6 class="text-white">22 M de vistas  hace 4 años  <span style="color: #3d9ef1; cursor:pointer;">#Mashup #8230 #HyperMashup</span></h6>
+                    <h6 class="text-white">"This is a template that consumes the YouTube API service. Enjoy it!", BlurryFace.</h6>
                 </div>
             </div>
+            <div class="row mt-3">
+                <div class="col-md-8">
+                    <h5 class="text-white">11,182 comentarios</h5>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-8 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white">
+                        <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
+                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                    </div>
+                    <div class="row text-white ps-5">
+                        <p>"This is a sample text; please feel free to modify it."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-8 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white">
+                        <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
+                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                    </div>
+                    <div class="row text-white ps-5">
+                        <p>"This is a sample text; please feel free to modify it."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-8 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white">
+                        <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
+                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                    </div>
+                    <div class="row text-white ps-5">
+                        <p>"This is a sample text; please feel free to modify it."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-8 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white">
+                        <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
+                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                    </div>
+                    <div class="row text-white ps-5">
+                        <p>"This is a sample text; please feel free to modify it."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-8 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white">
+                        <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
+                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                    </div>
+                    <div class="row text-white ps-5">
+                        <p>"This is a sample text; please feel free to modify it."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-8 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white">
+                        <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
+                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                    </div>
+                    <div class="row text-white ps-5">
+                        <p>"This is a sample text; please feel free to modify it."</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-8 p-0">
+                    <div class="d-flex align-items-center justify-content-start text-white">
+                        <button class="btn"><i class="fas fa-user fs-4 text-white"></i></button>
+                        <h6 class="m-0">@BlurryFace hace 2 años</h6><br>
+                    </div>
+                    <div class="row text-white ps-5">
+                        <p>"This is a sample text; please feel free to modify it."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="videosR" class="col-md-4">
+            {{-- aqui van los videos por defaul --}}
         </div>
     </div>
 </div>
