@@ -37,8 +37,8 @@
 </div>
 <div class="container-fluid py-3 ps-5" style="background-color: #0f0f0f;">
     <div class="row ps-5">
-        <div class="col-md-12 col-12">
-            <h4 class="text-white">Tame Impala x Justin Timberlake - The Less I Know The Better & Sexy Back (Mashup) (Extended Version)</h4>
+        <div id="video-titulo" class="col-md-12 col-12">
+            {{-- Aqui se genera el titulo dinamicamente del video --}}
         </div>
     </div>
     <div class="row ps-5 mt-2">
@@ -47,7 +47,9 @@
                 <div class="col-md-5 col-sm-12 col-5">
                     <div class="d-flex align-items-center justify-content-start gap-4">
                         <button class="btn bg-transparent"><i class="fas fa-user text-white fs-4"></i></button>
-                        <h6 class="text-white">HyperMashup | by CubixyBlue</h6>
+                        <h6 class="text-white">XBlurryFaceX | by Bootstrap <br>
+                            <span class="text-white">20M k suscriptores</span>
+                        </h6>
                         <button class="btn bg-white text-black fw-medium" style="border-radius:100px">Suscribirse</button>
                     </div>
                 </div>
@@ -91,37 +93,3 @@
         border: none; 
     }
 </style>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        document.getElementById('input').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                const query = document.getElementById('input').value;
-                
-                fetch(`/search-videos?query=${query}`)
-                .then(response => response.json())
-                .then(videos => {
-                    const videoContainer = document.getElementById('video-container');
-                    videoContainer.innerHTML = ''; 
-                    
-                    videos.forEach(video => {
-                        const videoElement = document.createElement('div');
-                        videoElement.innerHTML = `
-                    <iframe 
-                        src="https://www.youtube.com/embed/${video.id.videoId}" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen>
-                    </iframe>
-                `;
-                        videoContainer.appendChild(videoElement);
-                    });
-                    document.getElementById('input').value = '';
-                })
-                .catch(error => {
-                    console.error('Error al buscar videos:', error);
-                });
-            }
-        });
-    });
-    
-</script>
