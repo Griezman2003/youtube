@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ApiController extends Controller
 {
     /**
-    * esta funcion hace el consumo de la Api de youtube
+    * esta funcion hace el consumo de la Api de youtube y por medio de un buscador devuelve una respuesta
     * [searchVideos description]
     *
     * @param   Request  $request  [$request description]
@@ -36,6 +36,12 @@ class ApiController extends Controller
         }
     }
     
+    /**
+     * Esta funcion retorna los videos por defecto que no son buscados
+     * [index description]
+     *
+     * @return  [type]  [return description]
+     */
     public function index()
     {
         $apiKey = 'AIzaSyBFAeN-1s7AVVPaPPL8VFiJoFBHX_Rych8'; 
