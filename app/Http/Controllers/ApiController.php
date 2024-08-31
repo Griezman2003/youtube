@@ -17,7 +17,7 @@ class ApiController extends Controller
     */
     public function searchVideos(Request $request)
     {
-        $apiKey = ('');
+        $apiKey = ('your api');
         $query = $request->input('query');
         $maxResults = 1;
         $response = Http::get('https://www.googleapis.com/youtube/v3/search', [
@@ -30,10 +30,6 @@ class ApiController extends Controller
     
         if ($response->successful()) {
             $items = $response->json()['items'];
-    
-            if (empty($items)) {
-                return response()->json(['error' => 'No videos found'], 404);
-            }
             $videoIds = array_map(function ($item) {
                 return $item['id']['videoId'];
             }, $items);
@@ -44,12 +40,8 @@ class ApiController extends Controller
             ]);
             if ($detailsResponse->successful()) {
                 return response()->json($detailsResponse->json()['items']);
-            } else {
-                return response()->json(['error' => 'Error al obtener detalles del video'], $detailsResponse->status());
-            }
-        } else {
-            return response()->json(['error' => 'Error al buscar videos'], $response->status());
-        }
+            } 
+        } 
     }
     
     /**
@@ -60,8 +52,8 @@ class ApiController extends Controller
      */
     public function index()
     {
-        $apiKey = ''; 
-        $maxResults = 5; 
+        $apiKey = 'your api'; 
+        $maxResults = 7; 
         
         $response = Http::get('https://www.googleapis.com/youtube/v3/videos', [
             'key' => $apiKey,
